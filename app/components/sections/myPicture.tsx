@@ -13,13 +13,12 @@ export function MyPicture() {
 
     useEffect(() => {
         if (imageRef.current) {
-            // Image zoom effect on scroll
             gsap.to(imageRef.current, {
                 scale: 1.1,
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: imageRef.current,
-                    start: "top 80%", // Starts when the image is 80% from the top of the viewport
+                    start: "top 80%",
                     end: "bottom top",
                     scrub: true,
                 },
@@ -27,25 +26,23 @@ export function MyPicture() {
         }
 
         if (textRef.current) {
-            // Text animation (slide from bottom-right, without bounce, and then exit)
             gsap.fromTo(
                 textRef.current,
                 {
-                    x: 200, // Start from bottom-right off-screen
+                    x: 200,
                     opacity: 0,
                 },
                 {
-                    x: 0, // End at the bottom-left (after sliding in)
+                    x: 0,
                     opacity: 1,
-                    ease: "power1.out", // Smooth easing without bounce
-                    duration: 1.5, // Duration of the slide-in animation
+                    ease: "power1.out",
+                    duration: 1.5,
                     scrollTrigger: {
                         trigger: imageRef.current,
-                        start: "top 50%", // Start animation when the image reaches 50% of the viewport
-                        end: "bottom top", // End animation when the image is out of view
-                        scrub: true, // Synchronize the animation with the scroll position
+                        start: "top 50%",
+                        end: "bottom top",
+                        scrub: true,
                         onLeaveBack: () => {
-                            // Reverse the animation as the user scrolls up
                             gsap.to(textRef.current, { x: 200, opacity: 0, ease: "power1.out" });
                         },
                     },
@@ -72,7 +69,7 @@ export function MyPicture() {
                            text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl
                            leading-tight sm:leading-snug md:leading-snug lg:leading-none"
             >
-                WANDERER.
+                {'WANDERER.'}
             </div>
         </div>
     );
