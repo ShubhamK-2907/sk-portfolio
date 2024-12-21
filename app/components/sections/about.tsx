@@ -79,7 +79,7 @@ export function About() {
           <div>
             <h3 className="text-xl font-small mb-4 tracking-widest font-archivo">{'WHO  AM I'}</h3>
             <p className="text-muted-foreground">
-            {'A passionate developer dedicated to creating innovative solutions for real-world problems. Shubham Kumar Sahoo here, a proud 2022 graduate from PES University (CSE | BTech). Beyond my knack for coding, I absolutely thrive on gaming, Marvel, and travelling.\n' +
+            {'An experienced fullstack software engineer with a strong track record of success in high-profile projects. Shubham Kumar Sahoo here, a proud 2022 graduate from PES University (CSE | BTech). Beyond my knack for coding, I absolutely thrive on gaming, Marvel, and travelling.\n' +
                   'Last 2 years, hardcore focus on front-end development on top of React and Typescript with intermediate experience on backend technologies. Worked with 4-5 member teams, operating at maximum capacity under strict deadlines as an Individual Contributor - thanks to the Startup Hustle🔥!'}
             </p>
           </div>
