@@ -1,35 +1,19 @@
-FROM node:20-slim AS base
-
-FROM base AS builder
+FROM node:20-slim AS builder
 WORKDIR /app
 
 COPY package*.json ./
-
 RUN npm ci --legacy-peer-deps --no-cache
 
 COPY . .
-
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV NODE_ENV=production
-
 RUN npm run build
 
-FROM base AS runner
-WORKDIR /app
+FROM nginx:stable-alpine AS runner
 
-ENV NEXT_TELEMETRY_DISABLED=1
-ENV NODE_ENV=production
+COPY --from=builder /app/out /usr/share/nginx/html
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+EXPOSE 80
 
-USER nextjs
-
-EXPOSE 3000
-ENV PORT=3000
-
-CMD ["node", "server.js"]
+CMD ["nginx", "-g", "daemon off;"]

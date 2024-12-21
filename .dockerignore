@@ -4,4 +4,11 @@ node_modules
 .next
 !.next/static
 !.next/standalone
-.git
+.git/
+.gitignore
+.gitmodules
+.idea/
+.vscode/
+node_modules/
+README.md
+out/
