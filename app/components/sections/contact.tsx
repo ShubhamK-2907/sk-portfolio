@@ -153,7 +153,7 @@ export function Contact() {
                     <Github className="h-4 w-4 mr-2" />
                     <div>
                       <p className="font-medium">Social</p>
-                      <a href="https://www.linkedin.com/in/shubham-kumar-sahoo2907/" className="text-muted-foreground hover:text-primary">
+                      <a href="https://github.com/ShubhamK-2907/" className="text-muted-foreground hover:text-primary">
                         Github
                       </a>
                     </div>
