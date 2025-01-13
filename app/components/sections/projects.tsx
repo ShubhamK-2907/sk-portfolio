@@ -26,18 +26,18 @@ const projects = [
     live: "https://app.udooh.com/",
   },
   {
+    title: "Real Estate Discovery UI App",
+    description: "A modern real estate application optimized for mobile and tablet devices.",
+    image: "/assets/photos/real_estate_new.jpg",
+    technologies: ["React", "TypeScript", "SASS", "Vite", "Docker"],
+    github: "https://github.com/ShubhamK-2907/real-estate-application",
+  },
+  {
     title: "Generic AVL Project",
     description: "This project implements a generic AVL tree using C++ templates",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "FastAPI", "React", "OpenAI"],
+    technologies: ["C++ templates"],
     github: "https://github.com/ShubhamK-2907/generic-AVL-Project",
-  },
-  {
-    title: "Rust File Compressor",
-    description: "A Rust-based file compression utility to efficiently compress files using Gzip",
-    image: "/assets/photos/rustCompressor.svg",
-    technologies: ["Rust"],
-    github: "https://github.com/ShubhamK-2907/file_compressor",
   },
   {
     title: "My Pathfinder Visualiser",
