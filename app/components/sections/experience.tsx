@@ -10,9 +10,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {
+    company: "Astria Digital",
+    position: "Software Engineer",
+    period: "Feb 2025 - Present",
+    description: [
+      "Developed a scalable communication platform using Twilio Studio Flow and Flex UI",
+      "Deployed a real-time dashboard UI with dynamic tables, task queues, and interactive metrics (AHT, CSAT, volume, resolution rates)",
+      "Integrated Twilio voicemail flow with AWS Lambda to trigger smart routing based on agent availability",
+    ],
+  },
+  {
     company: "Udooh",
     position: "Software Engineer",
-    period: "May 2024 - Present",
+    period: "May 2024 - Jan 2025",
     description: [
       "Leading the platform UI development and MVP definition to acquire the first set of paying customers",
       "Built a dynamic, responsive discovery website paired with ZCal meeting Scheduler and GCP serverless Cloud Run Function",
