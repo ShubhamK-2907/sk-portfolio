@@ -23,7 +23,7 @@ const skills: Skill[] = [
     { name: "Node.js", percentage: 70, category: "Backend" },
     { name: "MySQL", percentage: 70, category: "Backend" },
     { name: "Firebase", percentage: 70, category: "Backend" },
-    { name: "FastAPI", percentage: 50, category: "Backend" },
+    { name: "AWS", percentage: 50, category: "Backend" },
     { name: "Docker", percentage: 90, category: "DevOps" },
     { name: "CI/CD", percentage: 90, category: "DevOps" },
 ];
